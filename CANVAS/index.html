@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приложение для тестирования - Риски</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.js" crossorigin="anonymous"></script>
+    <script defer src="js/diag.js"></script>
+    <script defer src="js/riskCalculator.js"></script>
+</head>
+<body>
+    <main>
+        <h1>Приложение для тестирования - Риски</h1>
+
+        <!-- Контейнер для таблицы и формы с графиком -->
+        <div class="content-container">
+            <!-- Таблица слева -->
+            <div class="table-container">
+                <h2>Ранжированная таблица рисков</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Риск</th>
+                            <th>Вероятность (1-5)</th>
+                            <th>Влияние (1-5)</th>
+                            <th>Оценка риска</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Таблица будет заполняться динамически -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Контейнер для формы и графика справа -->
+            <div class="right-container">
+                <!-- Форма для ввода данных -->
+                <div class="side-menu">
+                    <h2>Входные данные</h2>
+                    <label for="high">Верхняя граница</label>
+                    <input id="high" type="number" placeholder="Введите верхнюю границу">
+
+                    <label for="low">Нижняя граница</label>
+                    <input id="low" type="number" placeholder="Введите нижнюю границу">
+
+                    <label for="steps">Количество точек</label>
+                    <input id="steps" type="number" placeholder="Введите количество точек">
+
+                    <label for="accuracy">Количество точек после запятой (точность)</label>
+                    <input id="accuracy" type="number" placeholder="Введите точность">
+
+                    <button id="calculate-btn">Расчет</button>
+                    <span id="result"></span>
+                </div>
+
+                <!-- График -->
+                <div class="canvas-container">
+                    <canvas id="chart" width="600" height="400"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
