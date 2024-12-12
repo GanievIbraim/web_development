@@ -1,19 +1,39 @@
 const risks = [
   {
     id: 1,
-    name: "Недостаток времени на подготовку",
+    name: "Технические риски",
+    probability: 5,
+    impact: 5,
+  },
+  {
+    id: 2,
+    name: "Риски безопасности",
     probability: 4,
     impact: 5,
   },
-  { id: 2, name: "Неуверенность в ответах", probability: 3, impact: 4 },
-  { id: 3, name: "Трудность с пониманием заданий", probability: 4, impact: 4 },
-  { id: 4, name: "Сложности с концентрацией", probability: 3, impact: 3 },
-  { id: 5, name: "Заболевание или форс-мажор", probability: 2, impact: 5 },
+  {
+    id: 3,
+    name: "Риски разработки",
+    probability: 4,
+    impact: 4,
+  },
+  {
+    id: 4,
+    name: "Риски управления проектом",
+    probability: 3,
+    impact: 4,
+  },
+  {
+    id: 5,
+    name: "Риски со стороны пользователей",
+    probability: 4,
+    impact: 3,
+  },
   {
     id: 6,
-    name: "Технические проблемы с компьютером",
+    name: "Риски коммуникации",
     probability: 2,
-    impact: 4,
+    impact: 3,
   },
 ];
 

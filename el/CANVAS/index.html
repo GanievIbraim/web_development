@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Туристические поездки — Риски</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.js"
+            integrity="sha512-XcsV/45eM/syxTudkE8AoKK1OfxTrlFpOltc9NmHXh3HF+0ZA917G9iG6Fm7B6AzP+UeEzV8pLwnbRNPxdUpfA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="js/diag.js"></script>
+    <script defer src="js/riskCalculator.js"></script>
+</head>
+<body>
+    <main>
+        <h1>Туристические поездки — Риски проекта</h1>
+
+        <!-- Контейнер для формы и графика -->
+        <div class="content-container">
+            <!-- Форма для ввода данных -->
+            <div class="side-menu">
+                <h2>Входные данные</h2>
+                <div class="row">
+                    <label for="high">Верхняя граница</label>
+                    <input id="high" type="number" placeholder="Введите верхнюю границу">
+                </div>
+                <div class="row">
+                    <label for="low">Нижняя граница</label>
+                    <input id="low" type="number" placeholder="Введите нижнюю границу">
+                </div>
+                <div class="row">
+                    <label for="steps">Количество точек</label>
+                    <input id="steps" type="number" placeholder="Введите количество точек">
+                </div>
+                <div class="row">
+                    <label for="accuracy">Количество точек после запятой (точность)</label>
+                    <input id="accuracy" type="number" placeholder="Введите точность">
+                </div>
+                <div class="row">
+                    <button id="calculate-btn">Расчет</button>
+                    <span id="result"></span>
+                </div>
+            </div>
+
+            <!-- График -->
+            <div class="canvas-container">
+                <canvas id="chart" width="600" height="400"></canvas>
+            </div>
+        </div>
+
+        <h2>Ранжированная таблица рисков</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Риск</th>
+                    <th>Вероятность (1-5)</th>
+                    <th>Влияние (1-5)</th>
+                    <th>Оценка риска</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
